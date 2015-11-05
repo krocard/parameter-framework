@@ -211,7 +211,14 @@ void CXmlElement::setAttribute<std::string>(const string &name, const string &va
 //  - the libxml2 API takes a C-style string anyway.
 void CXmlElement::setAttribute(const string &name, const char *value)
 {
+    // xmlSetProp could be used instead but xmlNewProp allows to pinpoint case
+    // where wrongly setting twice an attribute
     xmlNewProp(_pXmlElement, BAD_CAST name.c_str(), BAD_CAST value);
+}
+
+void CXmlElement::removeAttribute(const string &name)
+{
+    xmlUnsetProp(_pXmlElement, BAD_CAST name.c_str());
 }
 
 template <typename T>

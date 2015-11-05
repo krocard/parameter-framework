@@ -96,6 +96,14 @@ public:
     void setNameAttribute(const std::string &strValue);
     void setTextContent(const std::string &strContent);
 
+    /** Remove an attribute carried by a node.
+     *
+     * This handles only attributes in no namespace.
+     * @param[in] name The attribute name
+     * return true if successful, false if the attribute was not found
+     */
+    void removeAttribute(const std::string &name);
+
     // Child creation
     void createChild(CXmlElement &childElement, const std::string &strType);
 
