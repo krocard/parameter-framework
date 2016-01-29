@@ -26,7 +26,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-add_library(cparameter SHARED ParameterFramework.cpp)
+add_library(cparameter SHARED ParameterFramework.h ParameterFramework.cpp)
 
 include(GenerateExportHeader)
 generate_export_header(cparameter)

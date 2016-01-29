@@ -34,79 +34,186 @@ endif()
 add_library(parameter SHARED
     ${parameter_OS_SPECIFIC_SRCS}
     AreaConfiguration.cpp
+    AreaConfiguration.h
     ArrayParameter.cpp
+    ArrayParameter.h
+    BackSynchronizer.h
     BaseParameter.cpp
-    BitParameterBlock.cpp
-    BitParameterBlockType.cpp
+    BaseParameter.h
     BitParameter.cpp
+    BitParameter.h
+    BitParameterBlock.cpp
+    BitParameterBlock.h
+    BitParameterBlockType.cpp
+    BitParameterBlockType.h
     BitParameterType.cpp
+    BitParameterType.h
     BitwiseAreaConfiguration.cpp
+    BitwiseAreaConfiguration.h
     BooleanParameterType.cpp
+    BooleanParameterType.h
     CommandHandlerWrapper.cpp
+    CommandHandlerWrapper.h
+    Component.h
     ComponentInstance.cpp
+    ComponentInstance.h
     ComponentLibrary.cpp
+    ComponentLibrary.h
     ComponentType.cpp
+    ComponentType.h
     CompoundRule.cpp
+    CompoundRule.h
     ConfigurableDomain.cpp
+    ConfigurableDomain.h
     ConfigurableDomains.cpp
-    ConfigurableElementAggregator.cpp
+    ConfigurableDomains.h
     ConfigurableElement.cpp
+    ConfigurableElement.h
+    ConfigurableElementAggregator.cpp
+    ConfigurableElementAggregator.h
     ConfigurationAccessContext.cpp
+    ConfigurationAccessContext.h
+    DefaultElementLibrary.h
     DomainConfiguration.cpp
+    DomainConfiguration.h
     Element.cpp
-    ElementLibrary.cpp
-    ElementLibrarySet.cpp
-    ElementLocator.cpp
-    EnumParameterType.cpp
-    EnumValuePair.cpp
-    FixedPointParameterType.cpp
-    FloatingPointParameterType.cpp
-    FormattedSubsystemObject.cpp
-    FrameworkConfigurationLocation.cpp
-    HardwareBackSynchronizer.cpp
-    InstanceConfigurableElement.cpp
-    InstanceDefinition.cpp
-    IntegerParameterType.cpp
-    LinearParameterAdaptation.cpp
-    LogarithmicParameterAdaptation.cpp
-    LoggingElementBuilderTemplate.cpp
-    MappingContext.cpp
-    MappingData.cpp
-    ParameterAccessContext.cpp
-    ParameterAdaptation.cpp
-    ParameterBlackboard.cpp
-    ParameterBlockType.cpp
-    Parameter.cpp
-    ParameterFrameworkConfiguration.cpp
+    Element.h
+    ElementBuilder.h
+    ElementBuilderTemplate.h
     ElementHandle.cpp
+    ElementLibrary.cpp
+    ElementLibrary.h
+    ElementLibrarySet.cpp
+    ElementLibrarySet.h
+    ElementLocator.cpp
+    ElementLocator.h
+    EnumParameterType.cpp
+    EnumParameterType.h
+    EnumValuePair.cpp
+    EnumValuePair.h
+    FileIncluderElementBuilder.h
+    FixedPointParameterType.cpp
+    FixedPointParameterType.h
+    FloatingPointParameterType.cpp
+    FloatingPointParameterType.h
+    FormattedSubsystemObject.cpp
+    FormattedSubsystemObject.h
+    FrameworkConfigurationGroup.h
+    FrameworkConfigurationLocation.cpp
+    FrameworkConfigurationLocation.h
+    HardwareBackSynchronizer.cpp
+    HardwareBackSynchronizer.h
+    InstanceConfigurableElement.cpp
+    InstanceConfigurableElement.h
+    InstanceDefinition.cpp
+    InstanceDefinition.h
+    IntegerParameterType.cpp
+    IntegerParameterType.h
+    KindElement.h
+    KindElementBuilderTemplate.h
+    LinearParameterAdaptation.cpp
+    LinearParameterAdaptation.h
+    LogarithmicParameterAdaptation.cpp
+    LogarithmicParameterAdaptation.h
+    LoggingElementBuilderTemplate.cpp
+    LoggingElementBuilderTemplate.h
+    Mapper.h
+    MappingContext.cpp
+    MappingContext.h
+    MappingData.cpp
+    MappingData.h
+    NamedElementBuilderTemplate.h
+    Parameter.cpp
+    Parameter.h
+    ParameterAccessContext.cpp
+    ParameterAccessContext.h
+    ParameterAdaptation.cpp
+    ParameterAdaptation.h
+    ParameterBlackboard.cpp
+    ParameterBlackboard.h
+    ParameterBlock.h
+    ParameterBlockType.cpp
+    ParameterBlockType.h
+    ParameterFrameworkConfiguration.cpp
+    ParameterFrameworkConfiguration.h
     ParameterMgr.cpp
+    ParameterMgr.h
     ParameterMgrFullConnector.cpp
+    ParameterMgrLogger.h
     ParameterMgrPlatformConnector.cpp
     ParameterType.cpp
+    ParameterType.h
     PathNavigator.cpp
+    PathNavigator.h
+    Plugin.h
     PluginLocation.cpp
+    PluginLocation.h
+    Results.h
+    Rule.h
     RuleParser.cpp
+    RuleParser.h
     SelectionCriteria.cpp
+    SelectionCriteria.h
     SelectionCriteriaDefinition.cpp
+    SelectionCriteriaDefinition.h
     SelectionCriterion.cpp
+    SelectionCriterion.h
     SelectionCriterionLibrary.cpp
+    SelectionCriterionLibrary.h
     SelectionCriterionRule.cpp
+    SelectionCriterionRule.h
     SelectionCriterionType.cpp
+    SelectionCriterionType.h
     SimulatedBackSynchronizer.cpp
+    SimulatedBackSynchronizer.h
     StringParameter.cpp
+    StringParameter.h
     StringParameterType.cpp
+    StringParameterType.h
     Subsystem.cpp
+    Subsystem.h
     SubsystemElementBuilder.cpp
+    SubsystemElementBuilder.h
+    SubsystemLibrary.h
     SubsystemObject.cpp
+    SubsystemObject.h
     SubsystemObjectCreator.cpp
+    SubsystemObjectCreator.h
+    SubsystemObjectFactory.h
+    SubsystemPlugins.h
+    Syncer.h
     SyncerSet.cpp
+    SyncerSet.h
     SystemClass.cpp
+    SystemClass.h
     TypeElement.cpp
+    TypeElement.h
     VirtualSubsystem.cpp
+    VirtualSubsystem.h
     VirtualSyncer.cpp
+    VirtualSyncer.h
+    XmlDomainExportContext.h
+    XmlDomainImportContext.h
+    XmlDomainSerializingContext.h
     XmlElementSerializingContext.cpp
+    XmlElementSerializingContext.h
     XmlFileIncluderElement.cpp
-    XmlParameterSerializingContext.cpp)
+    XmlFileIncluderElement.h
+    XmlParameterSerializingContext.cpp
+    XmlParameterSerializingContext.h
+    include/CommandHandlerInterface.h
+    include/ElementHandle.h
+    include/ParameterHandle.h
+    include/ParameterMgrFullConnector.h
+    include/ParameterMgrLoggerForward.h
+    include/ParameterMgrPlatformConnector.h
+    include/SelectionCriterionInterface.h
+    include/SelectionCriterionTypeInterface.h
+    log/include/log/Context.h
+    log/include/log/ILogger.h
+    log/include/log/LogWrapper.h
+    log/include/log/Logger.h
+)
 
 include(GenerateExportHeader)
 generate_export_header(parameter)

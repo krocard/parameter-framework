@@ -62,9 +62,13 @@ set(PFW_INCLUDE_DIRS
     ${PFW_INCLUDE_ROOT}/utility)
 
 add_library(skeleton-subsystem MODULE
-SkeletonSubsystemBuilder.cpp
-SkeletonSubsystem.cpp
-SkeletonSubsystemObject.cpp)
+    SkeletonMappingKeys.h
+    SkeletonSubsystem.cpp
+    SkeletonSubsystem.h
+    SkeletonSubsystemBuilder.cpp
+    SkeletonSubsystemObject.cpp
+    SkeletonSubsystemObject.h
+)
 
 target_include_directories(skeleton-subsystem PRIVATE ${PFW_INCLUDE_DIRS})
 target_link_libraries(skeleton-subsystem ${PFW_CORE_LIBRARY})

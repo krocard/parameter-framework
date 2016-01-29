@@ -29,11 +29,17 @@
 if (BUILD_TESTING)
 
     add_library(test-subsystem SHARED
+        TESTMappingKeys.h
         TESTSubsystem.cpp
+        TESTSubsystem.h
         TESTSubsystemBinary.cpp
+        TESTSubsystemBinary.h
+        TESTSubsystemBuilder.cpp
         TESTSubsystemObject.cpp
+        TESTSubsystemObject.h
         TESTSubsystemString.cpp
-        TESTSubsystemBuilder.cpp)
+        TESTSubsystemString.h
+    )
 
     target_link_libraries(test-subsystem PRIVATE parameter)
 endif()

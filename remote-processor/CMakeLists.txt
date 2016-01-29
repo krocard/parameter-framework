@@ -27,10 +27,20 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 add_library(remote-processor SHARED
-        Message.cpp
-        RequestMessage.cpp
         AnswerMessage.cpp
-        RemoteProcessorServer.cpp)
+        AnswerMessage.h
+        BackgroundRemoteProcessorServerBuilder.h
+        Message.cpp
+        Message.h
+        RemoteCommand.h
+        RemoteCommandHandler.h
+        RemoteCommandHandlerTemplate.h
+        RemoteProcessorServer.cpp
+        RemoteProcessorServer.h
+        RemoteProcessorServerInterface.h
+        RequestMessage.cpp
+        RequestMessage.h
+)
 
 include(GenerateExportHeader)
 generate_export_header(remote-processor
